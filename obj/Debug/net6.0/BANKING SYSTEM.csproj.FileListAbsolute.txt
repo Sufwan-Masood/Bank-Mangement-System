@@ -1,0 +1,14 @@
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\bin\Debug\net6.0\BANKING SYSTEM.exe
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\bin\Debug\net6.0\BANKING SYSTEM.deps.json
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\bin\Debug\net6.0\BANKING SYSTEM.runtimeconfig.json
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\bin\Debug\net6.0\BANKING SYSTEM.dll
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\bin\Debug\net6.0\BANKING SYSTEM.pdb
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.AssemblyInfoInputs.cache
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.AssemblyInfo.cs
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.csproj.CoreCompileInputs.cache
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.dll
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\refint\BANKING SYSTEM.dll
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.pdb
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\BANKING SYSTEM.genruntimeconfig.cache
+C:\Users\GOLDEN\source\repos\BANKING SYSTEM\obj\Debug\net6.0\ref\BANKING SYSTEM.dll
