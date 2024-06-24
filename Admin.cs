@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace myNamespace
 {
-    class Admin
+    class Admin : Person
     {
         private string firstName;
         private string lastName;
@@ -17,6 +18,14 @@ namespace myNamespace
         {
             get { return password; }
             set { password = value; }
+
+        }
+        public override void display()
+        {
+            Console.WriteLine(" DISPLAYING ADMIN INFORMATION ");
+            Console.WriteLine($"    First Name: {firstName}");
+            Console.WriteLine($"    Last Name: {lastName}");
+            Console.WriteLine($"    Password: {password}");
 
         }
         public Admin()
@@ -43,6 +52,7 @@ namespace myNamespace
                 Console.WriteLine("                  5   --->    Net Revenue Generated");
                 Console.WriteLine("                  6   --->    Change Credentials");
                 Console.WriteLine("                  7   --->    Check information of a Specific Customer ");
+                Console.WriteLine("                  8   --->    Verify Admin Information");
                 Console.WriteLine("                 10   --->    Exit   ");
                 Console.WriteLine("       Enter your choice: ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -122,6 +132,9 @@ namespace myNamespace
                         Console.BackgroundColor = ConsoleColor.DarkYellow;
                         customers[Convert.ToInt32(Console.ReadLine())].displayCustInfo();
                         Console.ResetColor();
+                        break;
+                    case 8:
+                        display();
                         break;
                     case 10:
                         Console.WriteLine(Messages.Admin_exit);

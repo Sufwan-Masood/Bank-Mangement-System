@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace myNamespace
 {
-    class Customer
+    class Customer : Person
     {
         private string firstName;
         private string lastName;
@@ -109,6 +109,8 @@ namespace myNamespace
                     case 5:
                         Console.WriteLine("DISPLAYING ALL INFO...");
                         displayCustInfo();
+                        Console.WriteLine("\n-----------------");
+                        display();
                         break;
 
                     case 6:
@@ -199,6 +201,12 @@ namespace myNamespace
                     Console.WriteLine(line);
                 }
             }
+        }
+        public override void display()
+        {
+            Console.WriteLine($"    Showing Information of {firstName}-{LastName} [customer]");
+            Console.WriteLine($"    Password: {Password}");
+            Console.WriteLine($"    Balance: {Balance}");
         }
     }
 }
