@@ -24,6 +24,7 @@ namespace myNamespace
             //Customers.Add(new Customer("Rabia", "Butt", "password8", 450000.0f));
             //Customers.Add(new Customer("Bilal", "Qureshi", "password9", 5000.0f));
             //Customers.Add(new Customer("Fatima", "Chaudhry", "password10", 5500.0f));
+            
             string JsonString = File.ReadAllText(@"C:\Users\GOLDEN\source\repos\BANKING SYSTEM\customers.json");
             Customers = JsonSerializer.Deserialize<List<Customer>>(JsonString);
 

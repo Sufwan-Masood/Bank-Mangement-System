@@ -15,6 +15,7 @@ namespace myNamespace
     /// </summary>
         public static void Main(string[] args)
         {
+            System.Threading.Thread.Sleep(0);
             Bank bank = new Bank();
             loading();
             Console.WriteLine("\t\tWELCOME TO BANK MANAGEMEN SYSTEM\n");
@@ -23,7 +24,7 @@ namespace myNamespace
 
 
         public static void loading()
-        {
+        {   
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.Write(Messages.Executing);
 

@@ -1,6 +1,7 @@
 ﻿using myNamespace;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,14 +57,24 @@ namespace myNamespace
             int choice = 0;
             while (!flag)
             {
-                Console.WriteLine($"WELCOME TO CUSTOMER SECTION {firstName} {lastName}");
+                Console.WriteLine($"\t\t\tWELCOME TO CUSTOMER SECTION {firstName} {lastName}");
+                Thread.Sleep(300);
                 Console.WriteLine("         1.DIPLSAY CURRENT BALANCE");
+                Thread.Sleep(300);
                 Console.WriteLine("         2.ADD BALANCE");
+                Thread.Sleep(300);
                 Console.WriteLine("         3.WITHDRAW BALANCE");
+                Thread.Sleep(300);
                 Console.WriteLine("         4.CHANGE CREDENTIALS (PASSWORD)");
+                Thread.Sleep(300);
                 Console.WriteLine("         5.DISPLAY ALL INFORMATION");
+                Thread.Sleep(300);
                 Console.WriteLine("         6.TERMS AND CONDTIONS");
-                Console.WriteLine("Press ' 7 ' to exit.");
+                Thread.Sleep(300);
+                Console.WriteLine("         7.Calculate taxes (filer and non filer)");
+                Thread.Sleep(300);
+                Console.WriteLine("Press ' 8 ' to exit.");
+                Thread.Sleep(300);
                 Console.WriteLine(" ENTER YOUR CHOICE: ");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -118,6 +129,28 @@ namespace myNamespace
                         terms();
                         break;
                     case 7:
+                        Console.WriteLine("Press 1 if you are filer , 2 if you are non-filer");
+                        Console.ForegroundColor= ConsoleColor.Red;
+                        Thread.Sleep(500);
+                        Console.WriteLine("             The tax deduction for a filer person is 0.15% ");
+                        Thread.Sleep(500);
+                        Console.WriteLine("             The tax deduction for a non-filer person is 0.75%, VAT also applies ");
+                        Console.ResetColor();
+                        switch (Convert.ToInt32(Console.ReadLine()))
+                        {
+                            case 1:
+                                calculateTax();     //function overloading having different arguments
+                                break;
+                            case 2:
+                                Console.WriteLine("Enter the number of days since the last payout: ");
+                                calculateTax(Convert.ToInt32(Console.ReadLine()));      //function overloading
+                                break;
+                            default:
+                                Console.WriteLine("Please enter a valid choice");
+                                break;
+                        }
+                        break;
+                    case 8:
                         flag = true;
                         Console.WriteLine("Exiting...");
                         break;
@@ -128,6 +161,17 @@ namespace myNamespace
                 }
             }
             Console.ResetColor();
+        }
+        public void calculateTax()
+        {   Console.WriteLine("     Calculating Tax...");
+            Console.WriteLine($"{firstName} {lastName} is a regular Tax Payer.");
+            Console.WriteLine($"Annual Tax is: ${(balance * 0.15) / 100}. ");
+        }
+        public void calculateTax(int days)
+        {
+            Console.WriteLine("     Calculating Tax...");
+            Console.WriteLine($"{firstName} {lastName} is a Non Filer (VAT fee also applies).");
+            Console.WriteLine($"Annual Tax is: {(balance * 0.75) / 100}(tax) + {0.25*days}(VAT markup) = ${((balance * 0.75) / 100)+(0.25 * days)} ");
         }
         public void displayCustInfo()
         {
